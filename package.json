@@ -1,0 +1,28 @@
+{
+  "name": "orca-piso",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "npm run test:core",
+    "test:core": "tsc src/calculator.ts --target ES2020 --module ES2022 --outDir .test-build --skipLibCheck && node --test scripts/calculator.test.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.11",
+    "@types/node": "^22.10.1"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

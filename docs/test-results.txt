@@ -1,0 +1,96 @@
+
+> orca-piso@1.0.0 test
+> npm run test:core
+
+
+> orca-piso@1.0.0 test:core
+> tsc src/calculator.ts --target ES2020 --module ES2022 --outDir .test-build --skipLibCheck && node --test scripts/calculator.test.mjs
+
+TAP version 13
+# Subtest: accepts a complete valid quote
+ok 1 - accepts a complete valid quote
+  ---
+  duration_ms: 2.431102
+  type: 'test'
+  ...
+# Subtest: requires a project name
+ok 2 - requires a project name
+  ---
+  duration_ms: 0.338921
+  type: 'test'
+  ...
+# Subtest: rejects zero or negative room dimensions
+ok 3 - rejects zero or negative room dimensions
+  ---
+  duration_ms: 0.231939
+  type: 'test'
+  ...
+# Subtest: rejects tile dimensions above the supported limit
+ok 4 - rejects tile dimensions above the supported limit
+  ---
+  duration_ms: 0.115434
+  type: 'test'
+  ...
+# Subtest: rejects grout outside 0–15 mm
+ok 5 - rejects grout outside 0–15 mm
+  ---
+  duration_ms: 0.180542
+  type: 'test'
+  ...
+# Subtest: rejects reserve outside 0–30%
+ok 6 - rejects reserve outside 0–30%
+  ---
+  duration_ms: 0.157538
+  type: 'test'
+  ...
+# Subtest: requires an integer number of tiles per box
+ok 7 - requires an integer number of tiles per box
+  ---
+  duration_ms: 0.101934
+  type: 'test'
+  ...
+# Subtest: rejects negative prices and labor rates
+ok 8 - rejects negative prices and labor rates
+  ---
+  duration_ms: 0.091137
+  type: 'test'
+  ...
+# Subtest: calculates area, tile count, boxes and costs for the sample
+ok 9 - calculates area, tile count, boxes and costs for the sample
+  ---
+  duration_ms: 0.549047
+  type: 'test'
+  ...
+# Subtest: rounds the number of boxes up to a whole package
+ok 10 - rounds the number of boxes up to a whole package
+  ---
+  duration_ms: 0.328755
+  type: 'test'
+  ...
+# Subtest: supports a zero-cost labor rate
+ok 11 - supports a zero-cost labor rate
+  ---
+  duration_ms: 0.244809
+  type: 'test'
+  ...
+# Subtest: throws instead of calculating invalid input
+ok 12 - throws instead of calculating invalid input
+  ---
+  duration_ms: 0.633855
+  type: 'test'
+  ...
+# Subtest: accounts for grout width in the tile grid estimate
+ok 13 - accounts for grout width in the tile grid estimate
+  ---
+  duration_ms: 0.143115
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 87.090205
